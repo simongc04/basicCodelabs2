@@ -15,13 +15,9 @@ fun WaterCounter (){
     var showTask by rememberSaveable() { mutableStateOf(false) }
         Column {
             if (vasosContador > 0);
-            if (showTask){
-                WellnessTaskItem("HOLA" {showTask = false )
-                }
+                val vasosTexto = if (vasosContador == 1) "vaso" else "vasos"
+                Text("Te has bebido ${vasosContador}  ${vasosTexto} vasos de agua")
             }
-            val vasosTexto = if (vasosContador == 1) "vaso" else "vasos"
-    Text("Te has bebido ${vasosContador}  ${vasosTexto} vasos de agua")
-        }
 
             Column {
             Row {
